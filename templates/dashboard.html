@@ -1,0 +1,42 @@
+<!doctype>
+<html>
+<head>
+    <style>
+        .upper{
+        width:inherit;
+        height:50px;
+        background-color: blue;
+        }
+        #site{
+        height:40px;
+        margin-top:5px;
+        margin-left:30px;
+        }
+        #sitebtn{
+        margin-top:5px;
+        margin-left:30px;
+        }
+        #lout{
+        float:right;
+        margin-right:30px;
+        font-size:23px;
+        color:black;}
+
+    </style>
+    <title>DevNet WebApp</title>
+</head>
+<body>
+<div>
+    <div class="upper">
+        <a href="{{url_for('logged_in')}}" id="site">
+            <img  id="sitebtn" src="../static/logo.jpg" height="40px">
+        </a>
+        <div style="display:inline;float:right;margin-top:5px">
+            <a style="margin-top:50%;margin-right:20px;font-size:23px;color:black" href="">Home</a>
+            <a style="margin-top:50%;margin-right:20px;font-size:23px;color:black" href="{{url_for('aboutus')}}">About Us</a>
+            <a id="lout" href="{{url_for('login')}}" name="lout">LogOut</a>
+        </div>
+    </div><br><br>
+</div>
+</body>
+</html>

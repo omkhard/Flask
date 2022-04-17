@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Users</title>
+    <style>
+    .text{
+        float:left;
+        margin-bottom:2px;
+    }
+    input[type=submit]{
+        background-color: #0099CC;
+        border-radius: 30px;
+        text-transformation: uppercase;
+        color: white ;
+        }
+    .register{
+           width: 500px;
+            height: 500px;
+            position: absolute;
+            margin: 200px 650px;
+            font-size:15px;
+          }
+    </style>
+</head>
+<body>
+<div class="register">
+    <form action="/action/register" method="post">
+        <div>
+            {% with message = get_flashed_messages() %}
+                {% if message %}
+                    {% for i in message %}
+                        <p style="color:red;font-size:12px;display:inline;">{{i}}</p>
+                    {% endfor %}
+                {%endif%}
+            {%endwith%}
+        </div>
+    <table>
+        <tr class="text"><th><p>Email</p></th></tr>
+        <tr><th><input type="email" placeholder="Email" name="email" autocomplete="off"></th>
+        </tr>
+        <tr class="text"><th><p>Username</p></th></tr>
+        <tr><th><input type="text" name="uname" placeholder="Username" autocomplete="off"></th></tr>
+        <tr class="text"><th><p>Password</p></th></tr>
+        <tr><th><input type="password" placeholder="Password" name="pass" autocomplete="off"></th></tr>
+        <tr span="2"><th>
+            <input type="submit" value="Back" name="btn">
+            <input type="submit" value="Register" name="btn">
+        </th></tr>
+    </table>
+    </form>
+</div>
+</body>
+</html>

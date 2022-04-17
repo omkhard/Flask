@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .upper{
+        width:inherit;
+        height:50px;
+        background-color: blue;
+        }
+        #site{
+        height:40px;
+        margin-top:5px;
+        margin-left:30px;
+        }
+        #sitebtn{
+        margin-top:5px;
+        margin-left:30px;
+        }
+        #lout{
+        float:right;
+        margin-right:30px;
+        font-size:23px;}
+
+    </style>
+    <title>DevNet WebApp </title>
+</head>
+<body>
+<div class="upper">
+        <a href="{{url_for('logged_in')}}" id="site">
+            <img  id="sitebtn" src="/static/logo.jpg" height="40px">
+        </a>
+        <div style="display:inline;float:right;margin-top:5px">
+            <a style="margin-top:50%;margin-right:20px;font-size:23px;" href="/action/login">Home</a>
+            <a style="margin-top:50%;margin-right:20px;font-size:23px;" href="{{url_for('aboutus')}}">About Us</a>
+            <a id="lout" href="{{url_for('login')}}">LogOut</a>
+        </div>
+    </div>
+    <p>{{em}}</p><br>
+<div style="text-align:center">
+
+We are the Automation Engineers pursuing this Devnet Project using<br>
+Python , Flask , WSGI (Web Server Gateway INterface Protocol) and SQlite3 db<br><br>
+    <p>Om Khard (Automation Python DevNet)</p><br>
+    <p>Deepak Kahar (Software Developer)</p><br>
+    <p>Akshansh Joshi (Software Developer)</p><br>
+    <p>Omkar Singh (SE)</p>
+</div>
+</body>
+</html>

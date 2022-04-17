@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+<head>
+    <style>
+        .text{
+        float:left;
+        }
+        input[type=submit]{
+        background-color: #0099CC;
+        border-radius: 30px;
+        text-transformation: uppercase;
+        color: white ;
+        }
+        .login{
+           width: 500px;
+            height: 500px;
+            position: absolute;
+            margin: 250px 650px;
+            font-size:24px;
+          }
+    </style>
+    <title>
+        Devnet WebApp
+    </title>
+</head>
+<body>
+<div class="login">
+<form action="/action" method="POST">
+    <div>
+        {% with message = get_flashed_messages() %}
+                {% if message %}
+                    {% for i in message%}
+                        <p style="color:red;font-size:12px;display:inline;">{{i}}</p>
+                    {%endfor%}
+                {% endif %}
+        {% endwith %}
+      </div>
+    <table>
+        <tr class="text"><th><p>Email</p></th></tr>
+        <tr><th><input type="email" placeholder="Email" name="email" autocomplete="off"></th>
+        </tr>
+        <tr class="text"><th><p>Password</p></th></tr>
+        <tr><th><input type="password" placeholder="Password" name="pass"></th></tr>
+        <tr span="2"><th><input type="submit" value="Login" name="btn">
+            <input type="submit" value="Register" name="btn"></th></tr>
+    </table>
+
+</form>
+</div>
+</body>
+</html>
